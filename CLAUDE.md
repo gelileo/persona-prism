@@ -6,7 +6,9 @@ Public open-source project. Strangers will read these files and write their own 
 
 ## Current state
 
-Pre-implementation. Design brief is agreed (below); the spec is not yet written. Next step is the persona schema section, then a written spec under `docs/superpowers/specs/`, then an implementation plan. Do not scaffold personas or write skill files before the spec is approved.
+Pre-implementation. The schema design is specced in `docs/superpowers/specs/2026-09-30-persona-schema-design.md` — read it before touching anything. Next step is an implementation plan. Do not scaffold personas or write skill files before that plan is approved.
+
+First persona is a US middle schooler, grade 7, built to full depth before any second persona exists.
 
 ## Locked decisions
 

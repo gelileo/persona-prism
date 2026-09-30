@@ -1,0 +1,7 @@
+# Internal planning artifacts stay out of the public repo
+docs/superpowers/
+
+# Superpowers execution workspace (scratch)
+.superpowers/
+
+# Public product documentation is tracked
