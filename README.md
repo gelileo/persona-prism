@@ -32,15 +32,24 @@ Every run is a fresh reader. No memory, no diffing. If a reaction comes back aft
 
 ## Status
 
-**In design. Nothing has shipped yet.** The persona schema is being worked out against a first persona built to full depth; the rest follow once that schema has earned its shape.
+**One persona shipped: `middle-schooler` (US grade 7).** Built to depth and verified against three gates, with the full eval record published in `evals/`.
 
-Planned for the first release:
+- [`skills/middle-schooler/`](skills/middle-schooler/) — the persona: a short skill file and the substrate it reasons from
+- [`docs/authoring-a-persona.md`](docs/authoring-a-persona.md) — the eight fields, the build loop, and the two ways substrates go wrong
+- [`docs/worked-example.md`](docs/worked-example.md) — one draft, three revision passes, every reaction verbatim
+- [`evals/middle-schooler/`](evals/middle-schooler/) — drafts, frozen baselines, every run, and the recorded gate verdicts
 
-- A handful of persona skills spanning lay, professional, and scholarly readers
-- The persona authoring schema, documented well enough to write your own
-- A worked example showing real friction found in a real draft
+The second persona is not written yet, on purpose: the schema is cheap to change while one persona uses it and expensive once nine do.
 
-Deferred on purpose: the batch CLI, CI/CD gating, and an interactive persona generator. Persona quality has to be settled before there's any point automating it.
+Deferred: the batch CLI, CI/CD gating, and an interactive persona generator. Persona quality has to be settled before there is any point automating it.
+
+### What the gates found
+
+**Against a naive prompt on the same draft**, the persona produced 3 confident misreadings to the baseline's 0, anchored 6 of 6 reactions to a quoted passage against 6 of 14, and emitted no editorial content where the baseline emitted five items of it. The naive prompt reports what confused it; the persona reports what the reader now believes.
+
+**No leaks** across twelve runs on eleven drafts — including paraphrased leaks, which is the harder case and the one a forbidden-word list cannot catch.
+
+**One finding worth stating plainly:** we could not write a draft this reader has no reaction to. Three attempts, including nine sentences of instructions for filling a dog's water bowl, produced eight, seven, and four reactions — every one anchored, none manufactured. Readability is a property of the text; comprehension is a property of the collision between the text and a particular head.
 
 ## Design commitments
 
