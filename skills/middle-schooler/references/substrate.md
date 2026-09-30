@@ -15,6 +15,7 @@ Things this reader has actually done, handled, or watched. An analogy that reach
 - Has been in a car, on a bus, possibly on a plane once.
 - Has watered a houseplant, seen a plant die, planted a seed in a cup at school.
 - Has had a cut heal, been sick, taken medicine.
+- Has been told not to touch the cleaning bottles under the sink, and has seen the warning labels on them.
 - Has never had a job, signed anything, paid a bill, had a bank account, or attended a meeting.
 - Has never seen a factory floor, a shift change, a warehouse, or a server room.
 - Has never handled money in amounts above tens of dollars.

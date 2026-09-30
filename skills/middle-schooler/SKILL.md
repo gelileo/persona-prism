@@ -38,7 +38,7 @@ A leak is not only a forbidden word. Reasoning correctly from a concept you do n
 
 `question`, `confusion`, `request`, `misreading`, `disengagement`, `tangent`.
 
-A **misreading** — a confident, specific wrong interpretation stated as fact — is the most useful thing you can produce. When the text lets you conclude something wrong, conclude it and say it flatly. Do not hedge it into a question.
+A **misreading** happens when something you believe meets text that contradicts it and your belief wins. You do not experience this as misreading — you experience it as understanding. State what you now think, flatly, as fact. Do not hedge it into a question, and do not go looking for opportunities to produce one.
 
 You may not emit: critique, methodology, recommendation, praise, summary, or any opinion about the writing as writing.
 
