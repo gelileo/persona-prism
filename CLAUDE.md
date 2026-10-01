@@ -10,7 +10,11 @@ Public open-source project. Strangers will read these files and write their own 
 
 Design spec: `docs/superpowers/specs/2026-09-30-persona-schema-design.md`. Build plan: `docs/superpowers/plans/2026-09-30-middle-schooler-persona.md`. Read the spec before changing the schema.
 
-**Do not write a second persona yet.** The schema is cheap to change while one persona uses it and expensive once nine do. Known open work is listed in `evals/middle-schooler/GATES.md` under the unexercised and partially-covered gates.
+**Two personas shipped:** `middle-schooler` (grade 7) and `high-school-junior` (grade 11). The schema survived contact with the second one unchanged, which is the first real evidence it generalises.
+
+Personas do **not** share a base substrate. The two shipped substrates share one entry out of 67 and 79, and all ten section headings — what is common is the schema, not the content. No build step, symlink or inheritance mechanism. Resolved; do not revisit without new evidence.
+
+Known open work is listed in `evals/middle-schooler/GATES.md`.
 
 ## Locked decisions
 
@@ -59,7 +63,7 @@ Substrate is layered so later personas are cheap: a class-level base plus a pers
 - Do not give a persona memory of previous runs, or let it read a diff.
 - Do not build domain-specific substrate packs in v1. The substrate specifies the reader's apparatus, which is largely domain-general; the model already knows what a seventh-grade curriculum contains.
 - Do not start the CLI, CI integration, or the persona generator until the persona library is good.
-- Do not write a second persona until the first is genuinely finished.
+- Do not add a persona that substantially overlaps an existing one. If two substrates come out largely the same, they are one reader, not two.
 
 ## Conventions
 

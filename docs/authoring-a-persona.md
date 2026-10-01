@@ -136,6 +136,16 @@ Do not write a substrate in one sitting. Entries invented up front sound plausib
 
 **An honest note about the shipped persona:** most of its substrate is seed — written up front from curriculum documents and the misconception literature, not discovered by the loop. Four entries were earned by observed failures and carry cases. That is a weaker provenance than this section prescribes, and the gap is recorded in [`GATES.md`](../evals/middle-schooler/GATES.md). Treat the loop as the standard to work toward, and treat a large unearned seed as debt rather than as a finished substrate.
 
+## Do personas share a base substrate?
+
+No. This was left open until a second persona existed; it is now answered with a measurement.
+
+The shipped `middle-schooler` (grade 7) and `high-school-junior` (grade 11) substrates share **one entry out of 67 and 79** — and all ten section headings. Readers four years apart have different curricula, different vocabulary tiers, different misconceptions, and different behaviour when they do not understand something. Even the reaction vocabularies differ: grade 7 emits `tangent`, grade 11 emits `performed-understanding`, `skepticism`, `relevance-challenge` and `skim`.
+
+What personas share is the **schema** — the eight fields and what belongs in each. That is this document. There is no shared content to factor out, so each persona's `references/` stands alone, and no build step, symlink or inheritance mechanism is needed.
+
+If you write two personas and find their substrates largely overlapping, that is a signal the two are not actually different readers and should be one persona with a note, not two.
+
 ## The three ways substrates go wrong
 
 **Too narrow.** An entry that fixes its case only by naming that case's specific content has memorized an answer. Generalize it to the reader trait it reveals.

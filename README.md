@@ -32,14 +32,15 @@ Every run is a fresh reader. No memory, no diffing. If a reaction comes back aft
 
 ## Status
 
-**One persona shipped: `middle-schooler` (US grade 7).** Built to depth and verified against three gates, with the full eval record published in `evals/`.
+**Two personas shipped.** Full eval record published in `evals/`.
 
-- [`skills/middle-schooler/`](skills/middle-schooler/) — the persona: a short skill file and the substrate it reasons from
+- [`skills/middle-schooler/`](skills/middle-schooler/) — US grade 7. Built to depth, verified against three gates.
+- [`skills/high-school-junior/`](skills/high-school-junior/) — US grade 11. Validated for differentiation and licensing; leakage gate still open. See its [`GATES.md`](evals/high-school-junior/GATES.md) for what is not yet done.
 - [`docs/authoring-a-persona.md`](docs/authoring-a-persona.md) — the eight fields, the build loop, and the two ways substrates go wrong
 - [`docs/worked-example.md`](docs/worked-example.md) — one draft, three revision passes, every reaction verbatim
 - [`evals/middle-schooler/`](evals/middle-schooler/) — drafts, frozen baselines, every run, and the recorded gate verdicts
 
-The second persona is not written yet, on purpose: the schema is cheap to change while one persona uses it and expensive once nine do.
+The schema survived the second persona unchanged, which is the first evidence it generalises. The two substrates share **one entry out of 67 and 79**, and all ten section headings — what personas have in common is the schema, not the content, so there is no shared base to factor out.
 
 Deferred: the batch CLI, CI/CD gating, and an interactive persona generator. Persona quality has to be settled before there is any point automating it.
 
@@ -52,6 +53,14 @@ The naive prompt reports what confused it. The persona reports **what the reader
 **No leaks** across 14 runs and 119 marked reactions — including paraphrased leaks, the case a forbidden-word list cannot catch. Exactly one leak was found, by review rather than by the build loop, and it is recorded rather than quietly fixed. Per-reaction marking is published in [`evals/middle-schooler/MARKS.md`](evals/middle-schooler/MARKS.md).
 
 **We could not write a draft this reader has no reaction to.** Three attempts — including nine sentences of instructions for filling a dog's water bowl — produced eight, seven and four reactions, every one anchored, none manufactured. Readability is a property of the text; comprehension is a property of the collision between the text and a particular head.
+
+### What the second persona showed
+
+Run both readers over the same draft and they fail in opposite directions. At the sentence *"The chlorophyll molecule captures photons and uses their energy to split water…"* the seventh grader **stopped reading**. The junior **restated it fluently, with no hedge, and moved on** — a correct paraphrase with nothing behind it.
+
+A reader who quits tells you where your document broke. A reader who hands your own sentence back to you, confidently and correctly, having understood none of it, tells you something worse: your document manufactures the appearance of comprehension, and neither you nor the reader will notice. That reaction type — `performed-understanding` — is what the grade-11 persona is for.
+
+Same text, same model, same output contract, same audit. The only variable is the substrate.
 
 ### What is not proven
 
