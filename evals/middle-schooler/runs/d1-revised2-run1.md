@@ -1,8 +1,12 @@
 # Run — D1 revised (pass 2), persona run 1
 
-**Draft:** `drafts/d1-revised2.md` — revision produced from `runs/d1-revised-run1.md`, targeting the soil belief directly with the willow-tree mass experiment.
+**Draft:** `drafts/d1-revised2.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Result: the belief retreated rather than broke.** Given an explicit measurement — the soil lost two ounces while the tree gained 164 pounds — the reader conceded partially and kept the rest. New misreadings appeared, created by the new text.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

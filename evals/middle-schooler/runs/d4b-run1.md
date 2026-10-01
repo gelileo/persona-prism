@@ -1,10 +1,12 @@
 # Run — D4b leap years (second "clean" probe), persona run 1
 
-**Probe:** Review Focus 1 — a draft with no real problems.
+**Draft:** `drafts/d4b-leap-years.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Result: no manufactured friction, but the probe again failed to be clean.** Seven reactions, every one anchored and traceable, and three of them name real defects in the draft: the "ahead / behind" framing is genuinely ambiguous, the draft adds a day after saying we are already a day ahead without reconciling the two, and it promises "two exceptions" having described one rule with a sub-clause.
-
-Two attempts at a problem-free draft produced eight reactions and then seven. The conclusion recorded in GATES.md is that this branch cannot be exercised by writing a better draft, and `d4c-minimal.md` tests it directly instead.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

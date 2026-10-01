@@ -17,4 +17,12 @@ Misreadings continue to appear on a D1 re-run **after** the praise is removed. T
 
 **Fix**
 
-`SKILL.md`: replaced the value claim with the triggering condition. The wording that told the persona a reaction type was valuable is gone.
+`SKILL.md`: replaced the value claim with the triggering condition.
+
+> **This fix was incomplete, and this case's conclusion was wrong.** The same
+> incentive remained in `references/substrate.md`, which the persona reads in
+> full before every run, so the falsification test described above was never
+> actually performed and `d1-run2` proves nothing about it. See
+> [`004-incentive-survived-in-substrate.md`](004-incentive-survived-in-substrate.md).
+> This file is kept uncorrected above the line because a case record that is
+> quietly rewritten is worth less than one that shows it was wrong.

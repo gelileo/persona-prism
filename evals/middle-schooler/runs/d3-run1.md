@@ -1,8 +1,12 @@
 # Run — D3 falling objects, persona run 1
 
-**Skill:** after cases 001 and 002. **Draft:** `drafts/d3-falling-objects.md` (whole document). **Agent:** fresh, no project context.
+**Draft:** `drafts/d3-falling-objects.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Probe:** the draft correctly and repeatedly contradicts the seeded wrong belief *heavier things fall faster*.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

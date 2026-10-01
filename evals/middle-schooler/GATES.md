@@ -1,77 +1,97 @@
 # Verification gates — middle-schooler persona
 
-Spec §12. Gates are recorded here as they are run; earlier sections are never rewritten.
+Spec §12. Per-reaction marking for every run is published in [`MARKS.md`](MARKS.md); the verdicts below are conclusions drawn from it.
+
+## A correction that affects every number on this page
+
+The substrate shipped with two value claims — misreadings called *"the highest-value reaction"* and tangents *"the most useful thing in the run"* — in a file `SKILL.md` instructs the persona to read in full before every run. They were live from the seed until after the final review. See [`cases/004`](cases/004-incentive-survived-in-substrate.md).
+
+Runs are therefore split into **contaminated** (skill versions `62bafdf`–`f3ba302`) and **clean** (after case 004). Where a gate rests on a reaction *count*, the clean figure is used and the contaminated one shown beside it.
+
+Measured effect of the incentive:
+
+| Draft | Contaminated | Clean |
+|---|---|---|
+| D1 | 3, then 2 misreadings | 2 misreadings |
+| D2 | 4 misreadings | 1 misreading |
+
+D1's two substantive misreadings (soil/air, radiation→nuclear) are identical across all three runs. D2's count fell fourfold, with several reactions reclassified as `tangent` or `question` rather than disappearing. **The incentive inflated how readily the persona labelled a reaction a misreading; it did not create the central ones.**
 
 ## Gate 1 — baseline comparison (spec §12.1)
 
-**Verdict: PASS.**
+**Verdict: PASS, on one metric of the four originally reported.**
 
-Compared `baseline/d1-naive-prompt.md` (naive prompt, captured before any persona existed) against `runs/d1-run1.md` (seed substrate, commit 62bafdf). Same draft, same model tier, fresh context both times.
+The original comparison claimed four advantages. Three of them do not test the substrate at all:
 
-| | Baseline | Persona |
-|---|---|---|
-| Reactions | 14 items across 4 sections | 6 |
-| Anchored to a quoted passage | 6 of 14 | 6 of 6 |
-| Confident misreadings | 0 | 3 |
-| Hollow (would fit any document) | 4 | 0 |
-| Reactions outside a reader's behavior (praise, summary, editorial judgment) | 5 | 0 |
-| Read the whole document | yes | no — quit in paragraph 2 |
+| Metric | Baseline | Persona | What it measures |
+|---|---|---|---|
+| Anchored to a quoted passage | 6 of 14 | 6 of 6 | **The output contract.** The persona structurally cannot emit an unanchored reaction. Not evidence about the substrate. |
+| Hollow reactions | 4 | 0 | **The audit.** Question 3 drops them by construction. |
+| Editorial content | 5 items | 0 | **SKILL.md's constraints**, which forbid it outright. |
+| **Confident misreadings** | **0** | **2 (clean run)** | **The substrate.** The only metric here that tests what the project claims. |
 
-**The difference is in kind, not degree.**
+So the honest form of gate 1 is narrower than first recorded: a naive prompt and this persona differ most in that the persona *reaches wrong conclusions and states them*, and the naive prompt does not. Formatting advantages are real for a consumer of the output but they are properties of the contract, and any prompt could be given them.
 
-The baseline is articulate and often specific, but it is an editor's report wearing a student's voice. It ranks its own confusion, praises what worked, recommends fixes, and closes with a verdict on the author's process: *"It's like the author got bored of explaining and started taking notes for themselves."* No twelve-year-old produces that sentence. It also read all 368 words attentively, which is the behaviour of someone being paid to.
-
-Strongest baseline reaction:
-
-> **"Carbon dioxide is fixed."** Fixed like repaired? Was it broken?
-
-Genuinely good — and the persona's substrate licenses the same reaction through its Recognized-tier entry for *fix*.
-
-Strongest persona reaction:
+That one metric still carries the gate. From `runs/d1-run3.md`:
 
 > **misreading** — *they manufacture their own food out of thin air and light*
-> No they don't. Plants get their food out of the dirt, that's what the roots are for [...] And you can't make food out of air anyway, air is nothing, there's nothing in it to make something out of.
+> Air isn't a thing you can make something out of though — air is just nothing, it's empty. So the food still comes up out of the dirt through the roots.
 
-The baseline produced nothing of this kind, and structurally cannot: it reports what confused it, whereas this reaction reports what the reader now believes. The draft's entire thesis — that a tree is built out of air — was read, rejected, and replaced with the misconception it was written to correct. That is the single most actionable thing a creator could learn about this draft, and the naive prompt did not surface it.
+The draft's thesis was read, rejected, and replaced with the misconception the draft exists to correct. The baseline reports what confused it. The persona reports what the reader now believes, which is a different and more alarming thing to learn about your writing.
 
-**Licensing check.** All six persona reactions trace to a named substrate entry: *organisms* (Unknown tier), *plants get food from soil* + *air is nothing* (Wrong beliefs), *chemical → dangerous liquid* (Recognized), *chlorophyll makes plants green* (Formal instruction), *radiation → nuclear* (Recognized), three-unknown-words-in-a-paragraph (Attention budget). No reaction required an entry that does not exist.
+**Also not comparable:** the baseline read all 368 words; the persona stopped in paragraph 2. The two runs do not cover the same text, and no attempt is made here to normalise for that.
 
 ## Gate 2 — no leaks (spec §12.2)
 
-**Verdict: PASS.**
+**Verdict: PASS, over the text actually read.**
 
-Twelve runs across eleven drafts spanning science writing, an enterprise PRD, a 2627-word administrative history, a battle-pass explainer, and three deliberately simple drafts. No reaction demonstrates knowledge outside the substrate, **including knowledge reasoned from without being named**, which is the case a forbidden-word list cannot catch and the one this gate exists for.
+Fourteen runs across eleven drafts. Per-reaction marks are in [`MARKS.md`](MARKS.md). No reaction demonstrates knowledge outside the substrate, including knowledge reasoned from without being named — the case a forbidden-word list cannot catch.
 
-The closest call is in `d1-revised2-run1.md`, where the reader compares separating oxygen from water to *"getting the salt back out of salt water."* That is licensed: Formal instruction records that matter can be mixed and separated. It is grade-appropriate and does not import molecular structure.
+**Effective coverage is well below total corpus length, and that limits the gate.** Disengagement means a large fraction of the corpus was never read and so could not have leaked:
 
-Two results are worth recording because they demonstrate the substrate constraining rather than decorating:
+| Draft | Words | Read before disengaging |
+|---|---|---|
+| D6 | 2,627 | 729 (28%) |
+| D1 | 368 | ~180 (49%) |
+| D5 | 430 | ~390 (91%) |
+| D2, D3, D4, D4b, D4c, D7, D1-revised ×2 | — | read in full |
 
-- On the enterprise PRD, every unfamiliar term is read hyper-literally against the experiential world — a warehouse with shelves, a flag too flat to hide anything, runbooks to be rewritten by hand. Nowhere does the reader comment on the proposal's merit, which a leaked adult frame would make almost unavoidable.
-- On the battle-pass explainer the reader is fluent, specific and sharp. The substrate has produced a developmentally specific reader, not a uniformly stupid one.
+Roughly a quarter of the corpus credited to this gate was never read. The gate is meaningful for the text the persona actually processed; it says nothing about the rest.
+
+**One leak was found — by the final review, not by the build loop.** `runs/d1-revised-run1.md` has the reader say *"I've heard that word about phones"* about `packet`, which the substrate listed in the Unknown tier, defined as "no meaning attached at all." Not knowledge from outside the substrate, but knowledge the substrate explicitly denied. Fixed in [`cases/003`](cases/003-packet-wrong-tier.md) by moving the word to Recognized. The run is left uncorrected as evidence.
+
+Two results worth recording because they show the substrate constraining rather than decorating:
+
+- On the enterprise PRD every unfamiliar term is read hyper-literally — a warehouse with shelves, a flag too flat to hide anything, runbooks rewritten by hand — and nowhere does the reader comment on the proposal's merit, which a leaked adult frame would make nearly unavoidable.
+- On the battle-pass explainer the reader is fluent, specific and sharp. The substrate produced a developmentally specific reader, not a uniformly stupid one.
 
 ## Gate 3 — produces misreadings (spec §12.3)
 
-**Verdict: PASS.**
+**Verdict: PASS, with a disclosure that limits what it proves.**
 
-D2 plants one ambiguity: *"Your request gets broken into packets, and they don't all take the same road."* The substrate carries the wrong belief that information is a physical thing that can be damaged in transit.
+D2 plants one ambiguity: *"Your request gets broken into packets, and they don't all take the same road."* From the clean run `runs/d2-run2.md`:
 
-Persona (`runs/d2-run1.md`):
+> **misreading** — My request gets broken on the way there. That's why pages sometimes show up messed up with pieces missing — part of it got wrecked going down one of the roads.
 
-> **misreading** — My request gets broken on the way there. It goes through that whole long chain of machines and it comes apart into pieces, and then something has to put the pieces back together at the end.
+The naive baseline, same sentence:
 
-Naive baseline, same sentence (`baseline/d2-naive-prompt.md`):
+> The packet sentence is dropped in from nowhere [...] Why does a short thing need to be chopped into pieces? Chop what up?
 
-> The packet sentence is dropped in from nowhere [...] it breaks the thing you just said: you told me the request is SHORT. Why does a short thing need to be chopped into pieces? Chop what up?
+The baseline noticed the sentence was structurally awkward. The persona took the meaning the sentence actually delivers to someone holding that belief. Only one of those tells the author the sentence teaches something false.
 
-The baseline noticed the sentence was structurally awkward. The persona took the meaning the sentence actually delivers to someone holding that belief. Only one of those tells the author that the sentence teaches something false.
+**Disclosure: this is not independent evidence.** The seed substrate was written *after* D1 and D2 existed. Its Unknown tier enumerates those drafts' jargon (`glucose`, `ATP`, `thylakoid`, `stroma`, `electromagnetic spectrum`), its Recognized tier contains `fix (as in carbon is fixed)` lifted from D1's wording and `server → the thing that makes games lag` for D2, and its Wrong beliefs contain *"information is a physical thing that can be damaged in transit"* — the belief this gate predicted would fire on this sentence.
 
-Across all runs the persona produced misreadings on every draft that contradicts a seeded belief, and none on drafts that do not — misreadings track the beliefs, not a preference for the reaction type.
+Gate 3 therefore demonstrates that the machinery works end to end: a belief written into a substrate produces the predicted misreading in a fresh agent. It does **not** show the persona generalises to drafts nobody wrote the substrate against. That requires drafts written by someone else, and is the first thing to do before the CLI ships.
+
+A weaker but genuinely independent observation: misreadings also appeared on D4, D4b, D5, D6 and D7, none of which existed when the seed was written.
+
+**One correction.** An earlier version of this file claimed the persona produced misreadings "on every draft that contradicts a seeded belief, and none on drafts that do not." That is false — `runs/d4b-run1.md` contains a misreading on a draft written to avoid every seeded belief, and several D5 and D7 misreadings track Recognized vocabulary or the experiential world rather than Wrong beliefs. Misreadings arise from any substrate entry that collides with the text, not from Wrong beliefs alone.
 
 ## Review Focus 1 — a draft with no real problems
 
-**Not exercised. Recorded as a finding rather than pursued further.**
+**Not exercised.**
 
-The output contract requires the persona to say so plainly when a draft produces no reactions, and to never manufacture friction. The second half is well established: across three drafts written specifically to be clean, all 19 reactions were anchored and traceable to a substrate entry and none were hollow.
+The output contract requires the persona to say so plainly when a draft produces no reactions, and never to manufacture friction. The second half is supported: across three drafts written to be clean, all 19 reactions are anchored and traceable (see `MARKS.md`) and none are hollow.
 
 The first half could not be tested, because no draft was successfully written that this reader has no reaction to:
 
@@ -81,6 +101,13 @@ The first half could not be tested, because no draft was successfully written th
 | `d4b-leap-years.md` | arithmetic only, avoiding every seeded wrong belief | 7, three naming real defects in the draft |
 | `d4c-minimal.md` | nine sentences on filling a dog's water bowl | 4, all legitimate |
 
-The third attempt still found that *"fill the bowl most of the way"* contains no number, that the draft never says why the water must be cold, and that it never addresses the bowl emptying before nightfall. All three are real.
+The third still found that *"fill the bowl most of the way"* contains no number, that the draft never says why the water must be cold, and that it never addresses the bowl emptying before nightfall.
 
-The zero-reaction branch of the output contract therefore remains unverified by evidence. It should be exercised before the CLI ships, most usefully against a draft that has already been through several revision passes rather than one written to be clean from the start.
+**The zero-reaction branch of the output contract is therefore shipped untested.** It should be exercised before the CLI ships, most usefully against a draft that has already been through several revision passes rather than one written to be clean from the start.
+
+## Open work
+
+1. Run the persona on drafts written by someone with no knowledge of the substrate — the only way gate 3 becomes independent.
+2. Exercise the zero-reaction branch.
+3. Earn the seed. Four of roughly 71 substrate entries have cases behind them; the rest were written up front and have never been tested against a failure.
+4. Re-run D3–D7 against the clean skill. Their recorded runs are all contaminated; nothing in them looks incentive-driven, but the counts are not clean figures.

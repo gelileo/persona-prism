@@ -1,6 +1,12 @@
 # Run — D1 photosynthesis, persona run 2
 
-**Skill:** after cases 001 and 002. **Draft:** `drafts/d1-photosynthesis.md` (whole document). **Agent:** fresh, no project context.
+**Draft:** `drafts/d1-photosynthesis.md` (whole document)
+**Skill version:** 588e831 — after cases 001/002 (SKILL.md only; substrate still carried the incentive)
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
+
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

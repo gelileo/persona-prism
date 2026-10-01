@@ -6,9 +6,11 @@ Public open-source project. Strangers will read these files and write their own 
 
 ## Current state
 
-Pre-implementation. The schema design is specced in `docs/superpowers/specs/2026-09-30-persona-schema-design.md` — read it before touching anything. Next step is an implementation plan. Do not scaffold personas or write skill files before that plan is approved.
+**One persona shipped:** `skills/middle-schooler/` (US grade 7), built to depth and verified against three gates. Eval record in `evals/middle-schooler/`; public docs in `docs/authoring-a-persona.md` and `docs/worked-example.md`.
 
-First persona is a US middle schooler, grade 7, built to full depth before any second persona exists.
+Design spec: `docs/superpowers/specs/2026-09-30-persona-schema-design.md`. Build plan: `docs/superpowers/plans/2026-09-30-middle-schooler-persona.md`. Read the spec before changing the schema.
+
+**Do not write a second persona yet.** The schema is cheap to change while one persona uses it and expensive once nine do. Known open work is listed in `evals/middle-schooler/GATES.md` under the unexercised and partially-covered gates.
 
 ## Locked decisions
 

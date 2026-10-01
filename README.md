@@ -45,11 +45,23 @@ Deferred: the batch CLI, CI/CD gating, and an interactive persona generator. Per
 
 ### What the gates found
 
-**Against a naive prompt on the same draft**, the persona produced 3 confident misreadings to the baseline's 0, anchored 6 of 6 reactions to a quoted passage against 6 of 14, and emitted no editorial content where the baseline emitted five items of it. The naive prompt reports what confused it; the persona reports what the reader now believes.
+**One metric separates this persona from a naive prompt, and it is the one that matters.** Given the same draft, the naive prompt produced zero confident misreadings; the persona produced two. The persona's other advantages — every reaction anchored to a quoted passage, nothing hollow, no editorial commentary — are enforced by the output contract and the skill's constraints, so they measure the format rather than the substrate. Any prompt could be given them. Reaching a wrong conclusion and stating it flatly is the part that comes from the substrate.
 
-**No leaks** across twelve runs on eleven drafts — including paraphrased leaks, which is the harder case and the one a forbidden-word list cannot catch.
+The naive prompt reports what confused it. The persona reports **what the reader now believes**.
 
-**One finding worth stating plainly:** we could not write a draft this reader has no reaction to. Three attempts, including nine sentences of instructions for filling a dog's water bowl, produced eight, seven, and four reactions — every one anchored, none manufactured. Readability is a property of the text; comprehension is a property of the collision between the text and a particular head.
+**No leaks** across 14 runs and 119 marked reactions — including paraphrased leaks, the case a forbidden-word list cannot catch. Exactly one leak was found, by review rather than by the build loop, and it is recorded rather than quietly fixed. Per-reaction marking is published in [`evals/middle-schooler/MARKS.md`](evals/middle-schooler/MARKS.md).
+
+**We could not write a draft this reader has no reaction to.** Three attempts — including nine sentences of instructions for filling a dog's water bowl — produced eight, seven and four reactions, every one anchored, none manufactured. Readability is a property of the text; comprehension is a property of the collision between the text and a particular head.
+
+### What is not proven
+
+This repo argues that evidence should be published rather than asserted, so:
+
+- **The output contract's zero-reaction branch is shipped untested.** It is a code path no run has exercised.
+- **Gate 3 is not independent.** The substrate was written after the test drafts existed and contains the belief the gate predicted would fire. It shows the machinery works end to end, not that the persona generalises to drafts nobody wrote the substrate against.
+- **Most of the substrate is unearned.** Four of roughly seventy entries were discovered by observed failure and carry regression cases. The rest were written up front from curriculum documents and the misconception literature. The build loop is the standard to work toward; a large seed is debt.
+- **A quarter of the eval corpus was never read**, because the reader disengaged. The leak gate covers the text actually processed and nothing beyond it.
+- **Most recorded runs were produced under a defect.** The substrate carried a value claim favouring two reaction types for most of the build. It inflated how readily those labels were applied — fourfold on one draft — without creating the central reactions, which survived its removal unchanged. Full accounting in [`GATES.md`](evals/middle-schooler/GATES.md).
 
 ## Design commitments
 
@@ -57,7 +69,7 @@ Deferred: the batch CLI, CI/CD gating, and an interactive persona generator. Per
 
 **Reactions carry no diagnosis.** A persona reports what it felt and where. It does not explain the underlying flaw or prescribe a fix. The moment it does, it stops being a reader and becomes an editor in a costume.
 
-**Substrate entries earn their place.** Nothing goes into a persona because it sounds plausible. It goes in because it fixed an observed failure, and it arrives with a regression case attached.
+**Substrate entries should earn their place.** An entry belongs in a persona because it fixed an observed failure, and it should arrive with a regression case attached. The shipped persona meets that bar for four entries out of roughly seventy; the rest are seed. The gap is stated rather than papered over, because a substrate full of plausible untested entries is the failure mode this design is most prone to.
 
 ## License
 

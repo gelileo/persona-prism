@@ -1,10 +1,12 @@
 # Run — D4c minimal (third "clean" probe), persona run 1
 
-**Probe:** Review Focus 1, testing the output contract's zero-reaction branch directly rather than by writing a better draft. Nine sentences of owned vocabulary describing a concrete, physically familiar task.
+**Draft:** `drafts/d4c-minimal.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Result: four reactions, zero hollow, branch still unexercised.** Each reaction is legitimate — *"most of the way"* genuinely contains no number, the draft never says why the water must be cold, and it never addresses the bowl emptying before nightfall. The persona did not manufacture friction. It also did not run out of things to say.
-
-Third attempt. Recorded in GATES.md as a finding rather than pursued further.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

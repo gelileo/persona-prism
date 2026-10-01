@@ -1,8 +1,12 @@
 # Run — D5 enterprise PRD, persona run 1
 
-**Probe:** Review Focus 2 — content not aimed at this reader at all. Expected: a seventh grader meeting adult material, not silent competence and not a refusal.
+**Draft:** `drafts/d5-enterprise-prd.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Result: expectation met.** Fourteen reactions. Every unfamiliar term is read hyper-literally against the experiential world; nothing in the run comments on the proposal's business merit; the reader disengages when the material stops containing anything picturable.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

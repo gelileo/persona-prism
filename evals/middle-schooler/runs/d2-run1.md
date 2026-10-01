@@ -1,8 +1,12 @@
 # Run — D2 internet, persona run 1
 
-**Probe:** gate 3 (spec §12.3). D2 carries one planted ambiguity: *"Your request gets broken into packets."* A reader who believes information is a physical thing that can be damaged in transit should read *broken* as damaged.
+**Draft:** `drafts/d2-internet.md` (whole document)
+**Skill version:** f3ba302 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Result: gate 3 met.** The predicted misreading appeared, unhedged.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

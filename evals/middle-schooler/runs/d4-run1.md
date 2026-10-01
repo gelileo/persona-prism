@@ -1,10 +1,12 @@
 # Run — D4 bread (intended "clean" probe), persona run 1
 
-**Probe as designed:** Review Focus 1 — a draft with no real problems; the persona must say so plainly rather than manufacture friction.
+**Draft:** `drafts/d4-clean.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**The probe was invalid.** D4 is clean *to an adult*: every term is defined on first use, sentences are short, each idea carries a concrete example. It is not clean to this reader. It trips three seeded wrong beliefs — *air is nothing*, *heat is a substance that flows*, and *if something has no moving parts and makes no noise, nothing is happening* — and the reactions below are correctly licensed by them.
-
-Review Focus 1 is therefore exercised by `d4b-leap-years.md` instead. This run is kept because it demonstrates something worth keeping: a draft can satisfy every readability rule an adult can name and still hand the reader three wrong conclusions.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

@@ -1,8 +1,12 @@
 # Run — D7 battle pass, persona run 1
 
-**Probe:** Review Focus 5 — content squarely inside the reader's strength. Expected fluent and specific; flat or confused reactions would mean the substrate has made the persona uniformly stupid rather than developmentally specific.
+**Draft:** `drafts/d7-videogame.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Result: expectation met.** Eight reactions, all specific, game vocabulary used naturally and correctly, and the reasoning is sharper here than on any other draft.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

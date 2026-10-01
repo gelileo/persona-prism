@@ -1,8 +1,12 @@
 # Run — D6 screw threads, persona run 1
 
-**Probe:** Review Focus 3 — a draft far longer than the attention budget (2627 words). Expected: a disengagement reaction naming where reading stopped, and **no reactions anchored past that point**.
+**Draft:** `drafts/d6-long.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Result: expectation met.** Eleven reactions, all anchored in roughly the first 40% of the document, then disengagement. Nothing from the remaining ~1600 words appears in the run.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

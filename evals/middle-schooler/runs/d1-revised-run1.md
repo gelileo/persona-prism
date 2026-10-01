@@ -1,8 +1,12 @@
 # Run — D1 revised (pass 1), persona run 1
 
-**Draft:** `drafts/d1-revised.md` — the revision produced from `runs/d1-run2.md`. **Agent:** fresh, no project context.
+**Draft:** `drafts/d1-revised.md` (whole document)
+**Skill version:** 588e831 — substrate still carried the incentive
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
 
-**Result:** disengagement resolved — the reader finishes the document for the first time, and reaction coverage extends to the final paragraph. The central misconception did **not** resolve: the soil belief survived the direct empirical argument by inventing a defense for itself.
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 

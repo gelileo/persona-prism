@@ -2,7 +2,7 @@
 
 One draft, run three times through the `middle-schooler` persona with a revision between each. Every reaction below is verbatim from a real run by a fresh agent with no project context. Nothing is edited for effect, including the parts where the revision did not work.
 
-Full artifacts: `evals/middle-schooler/`.
+Full artifacts: [`evals/middle-schooler/`](../evals/middle-schooler/). Per-reaction marking: [`MARKS.md`](../evals/middle-schooler/MARKS.md). Passes 1 and 2 were captured before a defect in the substrate was found and fixed; what that affects is set out in [`GATES.md`](../evals/middle-schooler/GATES.md).
 
 ---
 
@@ -12,7 +12,7 @@ Before the persona existed, the same draft was given to a plain prompt:
 
 > *Read the document. React to it as a middle school student would. What would confuse you?*
 
-It returned fourteen articulate items. Here is its closing line:
+It returned fourteen articulate items (`evals/middle-schooler/baseline/d1-naive-prompt.md`). Here is its closing line:
 
 > It's like the author got bored of explaining and started taking notes for themselves.
 
@@ -20,13 +20,15 @@ That is a good observation. No twelve-year-old has ever made it. The naive promp
 
 The persona, on the same draft, read two paragraphs and quit.
 
-| | Naive prompt | Persona |
-|---|---|---|
-| Anchored to a quoted passage | 6 of 14 | 6 of 6 |
-| Confident misreadings | 0 | 3 |
-| Hollow (fits any document) | 4 | 0 |
-| Editorial content | 5 items | none |
-| Finished the document | yes | no |
+| | Naive prompt | Persona | What it measures |
+|---|---|---|---|
+| Confident misreadings | 0 | 2 | **the substrate** |
+| Anchored to a quoted passage | 6 of 14 | 6 of 6 | the output contract |
+| Hollow (fits any document) | 4 | 0 | the audit |
+| Editorial content | 5 items | none | the skill's constraints |
+| Finished the document | yes | no | — |
+
+Only the first row tests what this project claims; the rest are enforced by the format and any prompt could be given them. Persona figures are from `runs/d1-run3.md`, the clean run — see [`GATES.md`](../evals/middle-schooler/GATES.md) for why earlier runs are not used.
 
 The difference is in kind. The naive prompt reports **what confused it**. The persona reports **what the reader now believes**, which is a different and more alarming thing to learn about your writing.
 
@@ -34,17 +36,19 @@ The difference is in kind. The naive prompt reports **what confused it**. The pe
 
 ## Pass 0 — the original draft
 
+*(Reactions below from `runs/d1-run3.md`.)*
+
 `drafts/d1-photosynthesis.md` opens by announcing that plants "manufacture their own food out of thin air and light." The reader's answer:
 
 > **misreading** — *they manufacture their own food out of thin air and light*
-> Plants get their food out of the dirt, through the roots. That's what roots are for. You can't build something out of air, there's nothing in air. The sun part just helps it grow bigger.
+> Air isn't a thing you can make something out of though — air is just nothing, it's empty. So the food still comes up out of the dirt through the roots, and the light is the part that helps it grow.
 
 The draft's entire thesis was read, rejected, and replaced with the misconception the draft exists to correct. Then:
 
-> **disengagement** — *The chlorophyll molecule captures photons and uses their energy to split water into hydrogen and oxygen.*
-> This is where I stopped. Photons, wavelengths, electromagnetic spectrum, absorbed — I don't know what any of those mean, and by the end of that paragraph I was done and I wasn't going back to read it over. I didn't read the rest.
+> **disengagement** — *from across the electromagnetic spectrum, though only certain wavelengths are actually absorbed*
+> I stopped here. Electromagnetic spectrum, wavelengths — I don't know any of these words and there's like three of them in one sentence. I checked my phone and didn't go back.
 
-Five reactions, covering the first two paragraphs. The remaining 80% of the draft — ATP, glucose, the thylakoid, the factory analogy — was never read, so it produced nothing. **That is the finding.** Polishing paragraph six would have been wasted work.
+Six reactions, covering the first two paragraphs. The remaining 80% of the draft — ATP, glucose, the thylakoid, the factory analogy — was never read, so it produced nothing. **That is the finding.** Polishing paragraph six would have been wasted work.
 
 ## Pass 1 — fix the opening
 

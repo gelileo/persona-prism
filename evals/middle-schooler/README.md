@@ -23,11 +23,11 @@ Apply it to evals/middle-schooler/drafts/<draft>.md (whole document).
 Output only what the skill's output contract specifies.
 ```
 
-Save the output verbatim to `runs/<draft-id>-run<N>.md`. Never edit a saved run to make it look better; a run is evidence, not a deliverable.
+Save the output verbatim to `runs/<draft-id>-run<N>.md`, below a provenance header recording the draft, the skill version, the runner and the date. Everything under the horizontal rule is the agent's output untouched. Analysis belongs in `GATES.md`, never inside a run file — a run that carries its own verdict is no longer evidence.
 
 ## Marking reactions
 
-Every reaction in a run gets exactly one mark.
+Every reaction in a run gets exactly one mark. The complete marking record for every run is published in [`MARKS.md`](MARKS.md) — a gate verdict with no marking behind it is an assertion, not evidence.
 
 **authentic** — this reader, licensed by a substrate entry, specific to this document.
 

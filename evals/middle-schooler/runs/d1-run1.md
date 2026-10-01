@@ -1,8 +1,12 @@
 # Run — D1 photosynthesis, persona run 1
 
-**Skill:** `skills/middle-schooler/` (seed substrate, commit 62bafdf)
 **Draft:** `drafts/d1-photosynthesis.md` (whole document)
-**Agent:** fresh, no project context.
+**Skill version:** 62bafdf — seed substrate, before cases 001/002
+**Runner:** fresh `general-purpose` subagent, no project context, no conversation history.
+**Prompt:** the standard eval prompt in [`../README.md`](../README.md).
+**Captured:** 2026-09-30.
+
+Everything below the rule is the agent's output verbatim. Analysis of this run lives in [`../GATES.md`](../GATES.md), not here.
 
 ---
 
